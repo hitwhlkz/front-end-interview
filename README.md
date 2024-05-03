@@ -119,9 +119,6 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   
   示例：
   
-  css
-  
-  Copy code
   
   `a:link { color: blue; } a:visited { color: purple; }`
   
@@ -135,10 +132,6 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   
   示例：
   
-  css
-  
-  Copy code
-  
   `button:hover { background-color: lightblue; } input:focus { border-color: red; }`
   
 3. **元素状态伪类（Element State Pseudo-classes）**：
@@ -149,10 +142,6 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   这些伪类选择器通常用于根据元素的状态来改变样式，如表单中的选中状态或禁用状态。
   
   示例：
-  
-  css
-  
-  Copy code
   
   `input:checked + label { text-decoration: line-through; } input:disabled { opacity: 0.5; }`
   
@@ -165,10 +154,7 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   这些伪类选择器用于根据元素在文档结构中的位置来选择元素，实现特定的布局效果。
   
   示例：
-  
-  css
-  
-  Copy code
+
   
   `li:first-child { font-weight: bold; } p:nth-child(odd) { background-color: lightgray; }`
   
@@ -184,10 +170,6 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   
   示例：
   
-  css
-  
-  Copy code
-  
   `p::before { content: "→ "; color: red; }`
   
 2. **::after**：
@@ -196,9 +178,5 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   - 通常用于添加一些额外的内容，比如清除浮动、插入文本或图标等。
   
   示例：
-  
-  css
-  
-  Copy code
   
   `div::after { content: "This is a div element"; font-style: italic; }`
