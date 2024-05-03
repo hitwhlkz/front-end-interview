@@ -119,7 +119,6 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   
   示例：
   
-  
   `a:link { color: blue; } a:visited { color: purple; }`
   
 2. **用户动作伪类（User Action Pseudo-classes）**：
@@ -154,7 +153,6 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   这些伪类选择器用于根据元素在文档结构中的位置来选择元素，实现特定的布局效果。
   
   示例：
-
   
   `li:first-child { font-weight: bold; } p:nth-child(odd) { background-color: lightgray; }`
   
@@ -180,3 +178,48 @@ CSS3 中引入了许多新的选择器，这些选择器提供了更强大和灵
   示例：
   
   `div::after { content: "This is a div element"; font-style: italic; }`
+  
+
+选择器优先级：
+
+CSS 优先级是确定样式应用顺序的规则，它决定了当多个样式规则同时应用于同一个元素时，哪一条规则将会被应用。CSS 优先级的计算是基于选择器的特定性（Specificity）的，特定性是一个由四个部分组成的值，决定了样式的优先级。优先级从高到低分别是：
+
+1. **内联样式（Inline Styles）**：应用于 HTML 元素的 `style` 属性中的样式，直接写在 HTML 元素标签中，如：
+  
+  `<div style="color: red;"></div>`
+  
+2. **ID 选择器（ID Selectors）**：选择器的特定性为 100，用 `#` 表示，如：
+  
+  `#header { color: blue; }`
+  
+3. **类选择器、属性选择器和伪类选择器（Class Selectors, Attribute Selectors, Pseudo-class Selectors）**：选择器的特定性为 10，如：
+  
+  `.container { background-color: gray; } input[type="text"] { border: 1px solid black; } a:hover { text-decoration: underline; }`
+  
+4. **元素选择器和伪元素选择器（Element Selectors, Pseudo-element Selectors）**：选择器的特定性为 1，如：
+  
+
+**注意事项：**
+
+- !important声明的样式的优先级最高；
+- 如果优先级相同，则最后出现的样式生效；
+- 继承得到的样式的优先级最低；
+- 通用选择器（*）、子选择器（>）和相邻同胞选择器（+）并不在这四个等级中，所以它们的权值都为 0 ；
+- 样式表的来源不同时，优先级顺序为：内联样式 > 内部样式 > 外部样式 > 浏览器用户自定义样式 > 浏览器默认样式。
+
+#### 3.css单位：em/px/rem/vh/vw
+
+传统的项目开发中，我们只会用到`px`、`%`、`em`这几个单位，它可以适用于大部分的项目开发，且拥有比较良好的兼容性
+
+从`CSS3`开始，浏览器对计量单位的支持又提升到了另外一个境界，新增了`rem`、`vh`、`vw`、`vm`等一些新的计量单位
+
+利用这些新的单位开发出比较良好的响应式页面，适应多种不同分辨率的终端，包括移动设备等。
+
+在`css`单位中，可以分为长度单位、绝对单位，如下表所指示
+
+| CSS单位 |     |
+| --- | --- |
+| 相对长度单位 | em、ex、ch、rem、vw、vh、vmin、vmax、% |
+| 绝对长度单位 | cm、mm、in、px、pt、pc |
+
+这里我们主要讲述px、em、rem、vh、vw
